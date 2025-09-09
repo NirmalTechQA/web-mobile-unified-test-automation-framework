@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.testautomation</groupId>
-    <artifactId>web-mobile-test-automation-framework</artifactId>
+    <artifactId>web-mobile-unified-test-automation-framework</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>

@@ -78,7 +78,7 @@ public class SeWrappers extends GenericWrappers {
             : System.getenv("LT_USERNAME");
     public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "" // Add accessKey here
             : System.getenv("LT_ACCESS_KEY");
-    public static String webGridUrl = System.getenv("LT_GRID_URL") == null ? "hub.lambdatest.com" : System.getenv("LT_GRID_URL");
+    public static String webGridUrl = System.getenv("LT_GRID_URL") == null ? "" : System.getenv("LT_GRID_URL");
 
 
 	/**

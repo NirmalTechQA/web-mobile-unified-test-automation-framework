@@ -52,7 +52,7 @@ public class CommonNativeWrappers extends AbstractTestNGCucumberTests {
     public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "" // Add accessKey here
             : System.getenv("LT_ACCESS_KEY");
     public static String appId;
-    public static String mobileGridUrl = System.getenv("LT_GRID_URL") == null ? "mobile-hub.lambdatest.com" : System.getenv("LT_GRID_URL");
+    public static String mobileGridUrl = System.getenv("LT_GRID_URL") == null ? "" : System.getenv("LT_GRID_URL");
     public static String timeStamp;
 
 	/**

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2" verbose="5">
+    <test thread-count="5" name="Test">
+    	<parameter name="executionType" value="local"></parameter>
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="testrunner.TestRunnerWeb"/>
+        </classes>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->

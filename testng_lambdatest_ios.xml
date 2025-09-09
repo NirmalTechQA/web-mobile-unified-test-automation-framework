@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="5">
+	<parameter name="platformName" value="ios"></parameter>
+	<parameter name="platformVersion" value="17"></parameter>
+	<parameter name="deviceName" value="iPhone 15"></parameter>
+	<parameter name="app" value=""></parameter>
+	<parameter name="projectName" value="iOS-Sanity"/>
+    <parameter name="buildName" value="iOS Build"/>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="testrunner.TestRunnerMobile" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

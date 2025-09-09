@@ -1,0 +1,41 @@
+image: maven:3.8.4-jdk-11
+
+pipelines:
+  default:
+    - step:
+        name: Run Selenium Tests on LambdaTest on Web
+        caches:
+          - maven
+        script:
+          - export LT_USERNAME=${LT_USERNAME}
+          - export LT_ACCESS_KEY=${LT_ACCESS_KEY}
+          - mvn clean install
+          - mvn clean test -Dsurefire.suiteXmlFiles=testng_lambdatest_web.xml -Dcucumber.filter.tags="@login1" -DautomationType="web"
+  
+#    - step:
+#        name: Run Appium Tests on LambdaTest on Android
+#        caches:
+#          - maven
+#        script:
+#          - export LT_USERNAME=${LT_USERNAME}
+#          - export LT_ACCESS_KEY=${LT_ACCESS_KEY}
+#          - mvn clean install          
+#          - mvn clean test -Dsurefire.suiteXmlFiles=testng_lambdatest_android.xml -Dcucumber.filter.tags="@loginandroid1" -DautomationType="mobile"
+#    - step:
+#        name: Run Appium Tests on LambdaTest on iOS
+#        caches:
+#          - maven
+#        script:
+#          - export LT_USERNAME=${LT_USERNAME}
+#          - export LT_ACCESS_KEY=${LT_ACCESS_KEY}
+#          - mvn clean install
+#          - mvn clean test -Dsurefire.suiteXmlFiles=testng_lambdatest_ios.xml -Dcucumber.filter.tags="@loginiOS1" -DautomationType="mobile"
+
+schedules:
+    - cron: "0 0 * * *"  # Run at midnight every day
+      pipeline: custom/scheduled-sanity
+    - cron: "0 12 * * *" # Run at noon every day
+      pipeline: custom/scheduled-sanity
+
+caches:
+    maven: ~/.m2/repository     

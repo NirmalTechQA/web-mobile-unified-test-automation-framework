@@ -1,3 +1,5 @@
+# This is a sample feature file for validating the login functionality in an Web application.
+
 @login @sanityWeb
 
 Feature: Validating Login Feature in Web

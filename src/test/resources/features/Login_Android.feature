@@ -1,4 +1,5 @@
 # This is a sample feature file for validating the login functionality in an Android application.
+
 @loginandroid @sanity
 
 Feature: Validating Login Feature in Android device

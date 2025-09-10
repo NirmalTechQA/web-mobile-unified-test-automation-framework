@@ -1,3 +1,5 @@
+# This is a sample feature file for validating the login functionality in an iOS application.
+
 @loginiOS @sanity
 Feature: Validating Login Feature in iOS device
 
